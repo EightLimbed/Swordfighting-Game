@@ -1,6 +1,4 @@
-res://main.tscn
-res://main.gd
-res://game.tscn
 res://Scenes/main.tscn
-res://src/main.gd
 res://Scenes/game.tscn
+res://Player/Player.tscn
+res://src/Player.gd

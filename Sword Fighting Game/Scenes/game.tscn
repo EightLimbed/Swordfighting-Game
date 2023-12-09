@@ -1,10 +1,59 @@
-[gd_scene format=3 uid="uid://cilsyisiylghn"]
+[gd_scene load_steps=6 format=3 uid="uid://cilsyisiylghn"]
+
+[ext_resource type="PackedScene" uid="uid://bb2x6uaqvseop" path="res://Player/Player.tscn" id="1_1hrwi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bsscf"]
+size = Vector2(1164, 118)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mhey"]
+size = Vector2(99, 563)
+
+[sub_resource type="Gradient" id="Gradient_tfomn"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7j1x3"]
+gradient = SubResource("Gradient_tfomn")
+width = 1
+height = 1
 
 [node name="Game" type="Node2D"]
 
-[node name="Label" type="Label" parent="."]
-offset_left = 422.0
-offset_top = 348.0
-offset_right = 710.0
-offset_bottom = 374.0
-text = "Imagine the game starts playing here"
+[node name="Player" parent="." instance=ExtResource("1_1hrwi")]
+position = Vector2(542, 399)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(576, 592)
+shape = SubResource("RectangleShape2D_bsscf")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(578, -6)
+shape = SubResource("RectangleShape2D_bsscf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(43.5, 251.5)
+shape = SubResource("RectangleShape2D_5mhey")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1114, 267)
+shape = SubResource("RectangleShape2D_5mhey")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(576, -12)
+scale = Vector2(1174.25, 129.5)
+texture = SubResource("GradientTexture2D_7j1x3")
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(577, 598)
+scale = Vector2(1174.25, 129.5)
+texture = SubResource("GradientTexture2D_7j1x3")
+
+[node name="Sprite2D3" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(41, 278)
+scale = Vector2(102.125, -515.25)
+texture = SubResource("GradientTexture2D_7j1x3")
+
+[node name="Sprite2D4" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1116, 285)
+scale = Vector2(102.125, -515.25)
+texture = SubResource("GradientTexture2D_7j1x3")
