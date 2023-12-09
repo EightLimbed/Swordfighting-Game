@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bb2x6uaqvseop"]
+[gd_scene load_steps=5 format=3 uid="uid://bb2x6uaqvseop"]
 
 [ext_resource type="Script" path="res://src/Player.gd" id="1_kcmur"]
-[ext_resource type="Texture2D" uid="uid://dqvqphmhgn7ss" path="res://Sprites/katana2.png" id="2_1p52m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a46tc"]
 size = Vector2(20, 42)
@@ -10,7 +9,7 @@ size = Vector2(20, 42)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_udrm8"]
 gradient = SubResource("Gradient_80saw")
-width = 2
+width = 1
 height = 1
 
 [node name="Player" type="CharacterBody2D"]
@@ -22,10 +21,3 @@ shape = SubResource("RectangleShape2D_a46tc")
 [node name="Sprite" type="Sprite2D" parent="."]
 scale = Vector2(20, 42)
 texture = SubResource("GradientTexture2D_udrm8")
-
-[node name="Katana" type="Sprite2D" parent="Sprite"]
-position = Vector2(-1, -0.214286)
-rotation = -0.178332
-scale = Vector2(0.00237579, 0.00142228)
-skew = -0.493285
-texture = ExtResource("2_1p52m")
