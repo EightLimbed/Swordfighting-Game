@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bb2x6uaqvseop"]
+[gd_scene load_steps=6 format=3 uid="uid://bb2x6uaqvseop"]
 
 [ext_resource type="Script" path="res://src/Player.gd" id="1_kcmur"]
+[ext_resource type="Texture2D" uid="uid://dqvqphmhgn7ss" path="res://Sprites/katana2.png" id="2_1p52m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a46tc"]
+size = Vector2(20, 42)
 
 [sub_resource type="Gradient" id="Gradient_80saw"]
 
@@ -17,6 +19,12 @@ script = ExtResource("1_kcmur")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_a46tc")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(20, 20)
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(20, 42)
 texture = SubResource("GradientTexture2D_udrm8")
+
+[node name="Katana" type="Sprite2D" parent="."]
+position = Vector2(-20, -9)
+rotation = -0.361852
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_1p52m")
