@@ -2,4 +2,3 @@ res://Scenes/main.tscn
 res://Scenes/game.tscn
 res://Player/Player.tscn
 res://src/Player.gd
-res://src/main.gd
