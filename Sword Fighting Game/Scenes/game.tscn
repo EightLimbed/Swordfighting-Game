@@ -1,6 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://cilsyisiylghn"]
+[gd_scene load_steps=7 format=3 uid="uid://cilsyisiylghn"]
 
-[ext_resource type="PackedScene" uid="uid://bb2x6uaqvseop" path="res://Player/Player.tscn" id="1_1hrwi"]
+[ext_resource type="PackedScene" uid="uid://bb2x6uaqvseop" path="res://actors/Player/Player.tscn" id="1_1hrwi"]
+
+[sub_resource type="GDScript" id="GDScript_2s4g8"]
+script/source = "extends Node2D
+
+
+func create(to_create: Resource, pos: Vector2) -> CharacterBody2D:
+	var instance = to_create.instantiate()
+	instance.position = pos
+	get_node(\".\").add_child(instance)
+	return instance
+	
+
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bsscf"]
 size = Vector2(1164, 118)
@@ -16,6 +29,7 @@ width = 1
 height = 1
 
 [node name="Game" type="Node2D"]
+script = SubResource("GDScript_2s4g8")
 
 [node name="Player" parent="." instance=ExtResource("1_1hrwi")]
 position = Vector2(542, 399)

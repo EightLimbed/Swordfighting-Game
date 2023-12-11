@@ -2,3 +2,8 @@ res://Scenes/main.tscn
 res://Scenes/game.tscn
 res://Player/Player.tscn
 res://src/Player.gd
+res://FORK/FORK.tscn
+res://actors/FORK/FORK.tscn
+res://actors/Player/Player.tscn
+res://Scenes/game.gd
+res://src/FORK.gd

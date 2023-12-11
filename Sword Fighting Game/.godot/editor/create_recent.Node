@@ -1,8 +1,8 @@
+CollisionShape2D
 Sprite2D
+CharacterBody2D
 TextureButton
 Panel
-CollisionShape2D
 StaticBody2D
-CharacterBody2D
 Label
 Button
