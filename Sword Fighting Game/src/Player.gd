@@ -30,7 +30,7 @@ func do_gravity(delta: float) -> void:
 		velocity.y += gravity * delta
 
 func do_fork() -> void:
-	if Input.is_action_just_pressed("LEFT_MOUSE"):
+	if Input.is_action_just_pressed("SPACE"):
 		if fork == null:
 			fork = FORK.instantiate()
 			var to_mouse = Vector2(get_global_mouse_position().x - position.x, get_global_mouse_position().y - position.y).normalized()
@@ -55,7 +55,7 @@ func damper() -> void:
 		velocity = velocity * DAMPER if colliding() else velocity * AIR_DAMPER
 
 func jump() -> void:
-	if Input.is_action_just_pressed("ui_accept") and colliding():
+	if Input.is_action_just_pressed("SPACE") and colliding():
 		var diff = Vector2(get_global_mouse_position().x - position.x, get_global_mouse_position().y - position.y)
 		velocity = diff.normalized() * JUMP_VELOCITY
 
