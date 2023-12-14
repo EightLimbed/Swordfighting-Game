@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cilsyisiylghn"]
+[gd_scene load_steps=8 format=3 uid="uid://cilsyisiylghn"]
 
 [ext_resource type="PackedScene" uid="uid://bb2x6uaqvseop" path="res://actors/Player/Player.tscn" id="1_1hrwi"]
+[ext_resource type="Script" path="res://src/ComboRecognition.gd" id="2_vrj33"]
 
 [sub_resource type="GDScript" id="GDScript_2s4g8"]
 script/source = "extends Node2D
@@ -71,3 +72,6 @@ texture = SubResource("GradientTexture2D_7j1x3")
 position = Vector2(1116, 285)
 scale = Vector2(102.125, -515.25)
 texture = SubResource("GradientTexture2D_7j1x3")
+
+[node name="ComboRecognition" type="Node2D" parent="."]
+script = ExtResource("2_vrj33")

@@ -1,5 +1,6 @@
-res://actors/Player/Player.tscn
-res://src/Player.gd
 res://Scenes/main.tscn
 res://Scenes/game.tscn
 res://actors/FORK/FORK.tscn
+res://actors/Player/Player.tscn
+res://src/ComboRecognition.gd
+res://src/Player.gd
