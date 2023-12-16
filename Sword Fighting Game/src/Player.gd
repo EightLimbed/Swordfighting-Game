@@ -30,7 +30,7 @@ func do_gravity(delta: float) -> void:
 		velocity.y += gravity * delta
 
 func do_fork() -> void:
-	if Input.is_action_just_pressed("LEFT_MOUSE"):
+	if Input.is_action_just_pressed("ui_accept"):
 		if fork == null:
 			fork = FORK.instantiate()
 			var to_mouse = Vector2(get_global_mouse_position().x - position.x, get_global_mouse_position().y - position.y).normalized()

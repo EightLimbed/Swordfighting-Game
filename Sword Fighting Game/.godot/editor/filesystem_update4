@@ -7,3 +7,4 @@ res://actors/FORK/FORK.tscn
 res://actors/Player/Player.tscn
 res://Scenes/game.gd
 res://src/FORK.gd
+res://src/ComboRecognition.gd
